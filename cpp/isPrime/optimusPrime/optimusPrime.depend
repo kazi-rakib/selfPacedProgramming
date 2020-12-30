@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1609360529 source:c:\users\rakib\desktop\bin\cpp\isprime\optimusprime\main.cpp
+	<iostream>
+	<cmath>
+
