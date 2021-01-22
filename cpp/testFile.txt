@@ -1,4 +1,0 @@
-This is a test file.	First line of text!
-Second line.This is a test file.	First line of text!
-Second line.This is a test file.	First line of text!
-Second line.
