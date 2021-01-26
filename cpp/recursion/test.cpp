@@ -6,7 +6,7 @@ void recurse(){
     
     static int count = 1;
     if (count > 5){
-        return;
+        // return;
     }
 
     printf("Counting forward: %d\n", count);
