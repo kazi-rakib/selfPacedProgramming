@@ -22,11 +22,16 @@ int main(int argc, char *argv[]){
 
     // your code ...
     // recurse();
-    cout<<" int     :"<<sizeof(int)<<endl;
-    cout<<"long     :"<<sizeof(long)<<endl;
-    cout<<"long int :"<<sizeof(long int)<<endl;
-    cout<<"long long:"<<sizeof(long long)<<endl;
-    cout<<"ll       :"<<sizeof(ll)<<endl;
+    
+    // cout<<" int     :"<<sizeof(int)<<endl;
+    // cout<<"long     :"<<sizeof(long)<<endl;
+    // cout<<"long int :"<<sizeof(long int)<<endl;
+    // cout<<"long long:"<<sizeof(long long)<<endl;
+    // cout<<"ll       :"<<sizeof(ll)<<endl;
+
+    char name[][] = { "rakib", " hasan" };
+
+    cout<<name[0]<<name[1]<<endl;
 
     return 0;
 }
