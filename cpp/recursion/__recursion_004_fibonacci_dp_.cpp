@@ -1,18 +1,21 @@
 #include <iostream>
 #include <cstring>
+#include <cstdlib>
 
 using namespace std;
 
-long long calls = 0;
+int calls = 0;
+int dp[50];
 
-int fibonacci(int n){
-  calls++;
+int fibo(int n){
+    calls++;
 
-  if(n == 1 || n == 2){
-    return 1;
-  }
+    if(dp[n] != 0) return dp[n];
 
-  return fibonacci(n-1) + fibonacci(n-2);
+    if(n == 1 || n == 2) return 1;
+
+    dp[n] = fibo(n-1) + fibo(n-2);
+    return dp[n];
 }
 
 int main(int argc, char *argv[]){
@@ -36,13 +39,16 @@ int main(int argc, char *argv[]){
     strcpy(orderOf, "th");
   }
 
-  int N = fibonacci(n);
+  dp[1] = 1;
+  dp[2] = 1;
+
+  int N = fibo(n);
   cout<<"The "<<n<<orderOf<<" fibonacci number: "<<N<<endl;
   cout<<"recursed: "<<calls<<" times\n\n";
   calls = 0;
 
   for(int i = 1; i<=n; i++){
-    printf(" %3d", fibonacci(i));
+    printf(" %3d", fibo(i));
   }
 
   cout<<"\t called: "<<calls<<endl<<endl;

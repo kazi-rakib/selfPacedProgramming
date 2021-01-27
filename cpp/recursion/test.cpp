@@ -1,6 +1,9 @@
 #include <iostream>
 
+#define ll long long
+
 using namespace std;
+
 
 void recurse(){
     
@@ -18,7 +21,12 @@ void recurse(){
 int main(int argc, char *argv[]){
 
     // your code ...
-    recurse();
+    // recurse();
+    cout<<" int     :"<<sizeof(int)<<endl;
+    cout<<"long     :"<<sizeof(long)<<endl;
+    cout<<"long int :"<<sizeof(long int)<<endl;
+    cout<<"long long:"<<sizeof(long long)<<endl;
+    cout<<"ll       :"<<sizeof(ll)<<endl;
 
     return 0;
 }
