@@ -15,8 +15,12 @@
 
 #include <iostream>
 #include <ctime>
+#include <string>
 
 using namespace std;
+
+// prototype(s)
+const string currentDateTime();
 
 int main(){
 
@@ -31,5 +35,31 @@ int main(){
         << (now->tm_min) << ':'
         << (now->tm_sec) << endl;
 
+  cout << currentDateTime << endl;
+
+  // another method
+  time_t current_time;
+  char *c_time_string;
+
+  current_time = time(NULL);
+  c_time_string = ctime(&current_time);
+
+  cout << c_time_string << endl;
+
   return 0;
 }
+
+// Get current date/time, format is YYYY-MM-DD.HH:mm:ss
+const string currentDateTime() {
+    time_t     now = time(0);
+    struct tm  tstruct;
+    char       buf[80];
+    tstruct = *localtime(&now);
+    // Visit http://en.cppreference.com/w/cpp/chrono/c/strftime
+    // for more information about date/time format
+    strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
+
+    return buf;
+}
+
+

@@ -1,14 +1,12 @@
 #include <stdio.h>
-
-int sum(int a, int b, int c){
-  return a+b+c;
-}
-
+#include <time.h>
 
 int main(){
 
-  int res = sum(2, 3, 4);
-  printf("%d\n", res);
+  time_t t;
+
+  printf("years since January 1, 1970 = %0.2lf\n", (double) time(&t)/(3600*24*365) );
 
   return 0;
 }
+
