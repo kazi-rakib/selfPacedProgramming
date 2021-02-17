@@ -1,32 +1,14 @@
 #include <stdio.h>
 
+int sum(int a, int b, int c){
+  return a+b+c;
+}
+
+
 int main(){
 
-  int n=1;
-
-  while(n != 0){
-    printf("Input a number: ");
-    scanf("%d", &n);
-
-    switch(n){
-      case 1:
-        printf("One time\n");
-        break;
-      case 2:
-        printf("Two times\n");
-        break;
-      case 3:
-        printf("Three times\n");
-        break;
-      case 4:
-        printf("Four times\n");
-        break;
-      default:
-        printf("Many times\n");
-    }
-
-    printf("\n\t---------------\n\n");
-  }
+  int res = sum(2, 3, 4);
+  printf("%d\n", res);
 
   return 0;
 }

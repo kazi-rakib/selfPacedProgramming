@@ -1,8 +1,6 @@
-#include <cstdio>
-#include <cstdlib>
-#include <ctime>
-
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int dice(){
   return 1 + ( rand()%6 );
