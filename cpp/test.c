@@ -1,11 +1,20 @@
 #include <stdio.h>
-#include <time.h>
+#include <string.h>
 
 int main(){
 
-  time_t t;
+  typedef union {
+    int id;
+    char name[20];
+  } student;
 
-  printf("years since January 1, 1970 = %0.2lf\n", (double) time(&t)/(3600*24*365) );
+  student st;
+
+  st.id = 17201142;
+  // st.name = "Rakib Hasan";
+  strcpy(st.name, "Rakib Hasan");
+  
+  printf("%d %s\n", st.id, st.name);
 
   return 0;
 }
