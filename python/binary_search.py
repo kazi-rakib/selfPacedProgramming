@@ -4,7 +4,7 @@ def bs(ara, x):
 	while left <= right :
 		
 		mid = left + (right-left)//2
-		
+		# print(left, mid, right)
 		if ara[mid] == x:
 			return mid
 			
@@ -13,27 +13,27 @@ def bs(ara, x):
 		else:
 			right = mid -1
 			
-	return -mid-1
+	return -(mid+1)
 	
 if __name__ == "__main__":
-	data = [4, 6, 8, 10, 11, 16, 18, 22]
+	data = [4, 6, 8, 10, 11, 16, 18, 22, 24]
 	print(data)
 	
-	print(bs(data, 4), 0)
-	
-	print(bs(data, 5), -1)
-	
-	print(bs(data, 6), 1)
-	
-	print(bs(data, 8), 2)
-	
-	print(bs(data, 10), 3)
-	
+	#print(bs(data, 4), 0)
+#	
+#	print(-bs(data, 12), -1)
+#	
+#	print(bs(data, 6), 1)
+#	
+#	print(bs(data, 8), 2)
+#	
+#	print(bs(data, 10), 3)
+#	
 	print(bs(data, 11), 4)
-	
-	print(bs(data, 16), 5)
-	
-	print(bs(data, 18), 6)
-	
-	print(bs(data, 33), -1)
-	
+#	
+#	print(bs(data, 16), 5)
+#	
+#	print(bs(data, 18), 6)
+#	
+#	print(-bs(data, 33), -1)
+#	

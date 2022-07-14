@@ -5,7 +5,7 @@ x = turtle.Turtle()
 y = turtle.Turtle()
 z = turtle.Turtle()
 
-length = 150
+length = 500
 
 # set position
 x.setpos(0, 0)
