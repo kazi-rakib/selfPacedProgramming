@@ -67,3 +67,5 @@ if __name__ == "__main__":
 	d = float(input("d="))
 	s2 = Solve(a, b, c, d)
 	print("x = ", s2.solve())
+
+	
