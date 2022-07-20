@@ -4,12 +4,18 @@
 class Solve:
 
 	# Initialization
-	def __init__(self, a, b, c, d):
+	def __init__(self, a, b, c, d, precision=1e-15):
 		self.a = a
 		self.b = b
 		self.c = c
 		self.d = d
+		# default value = 1e-15
+		self.precision = precision
+
+		# keeps track of the steps
 		self.count = 0
+
+		# shows the equation
 		print(self.__str__())
 	
 	
@@ -27,7 +33,7 @@ class Solve:
 
 		return eqn
 	
-
+	# ============= Bisection Method =============
 	# The actual algorithm for "Bisection Method"
 	#  has been implemented in this function
 	def solve(self):
