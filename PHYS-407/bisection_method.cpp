@@ -55,7 +55,16 @@ double solve(){
 int main(void){
 
   equation(1, 0, -2, -5);
-  cout<<solve()<<endl;
+  cout<<"Solution, X = "<<solve()<<endl;
+
+  cout<<"\n\nPlease input the co-efficients of the desired equation:\n\n";
+
+  cin>>a;
+  cin>>b;
+  cin>>c;
+  cin>>d;
+
+  cout<<"Solution, X = "<<solve()<<endl;
 
   return 0;
 }
