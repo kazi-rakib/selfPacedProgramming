@@ -53,7 +53,7 @@ class Solve:
 		# solving the equation
 		# 1e-15 is the lowest possible accuracy
 		#		that can be achieved for my machine(64bit)
-		epsilon =  1e-15
+		epsilon =  self.precision
 
 		while abs(R-L) > epsilon :
 			
